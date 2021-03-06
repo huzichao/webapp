@@ -11,9 +11,9 @@
             <!-- <img src="@/assets/imgss/swiper1.jpg" /> -->
             <swiper ref="mySwiper" :options="swiperOptions">
                 <swiper-slide><img src="@/assets/imgs/swiper1.jpg" /> </swiper-slide>
-                <swiper-slide style="background:green;">Slide 2</swiper-slide>
+                <swiper-slide style="background:white;">Slide 2</swiper-slide>
                 <swiper-slide><img src="@/assets/imgs/swiper1.jpg" /> </swiper-slide>
-                <swiper-slide style="background:red;">Slide 4</swiper-slide>
+                <swiper-slide style="background:white;">Slide 4</swiper-slide>
                 <swiper-slide><img src="@/assets/imgs/swiper1.jpg" /> </swiper-slide>
                 <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
@@ -79,12 +79,14 @@
             </div>
         </div>
         <!-- /热卖 -->
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
 // 导入组件
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 // 导入滑动模块
 import BScroll from 'better-scroll';
@@ -94,6 +96,7 @@ export default {
     // 激活组件
     components: {
         Header,
+        Footer,
     },
 
     data () {
@@ -163,7 +166,7 @@ export default {
 .home {
     width: 100%;
     height: 100%;
-    background: #ccc;
+    background: white;
 
     .lbt {
         width: 100%;
@@ -183,14 +186,12 @@ export default {
     .navs {
         width: 100%;
         height: px2rem(174);
-        background: blue;
         display: flex;
         flex-wrap: wrap;
-
         .nav {
             width: 25%;
             height: px2rem(87);
-            background: green;
+            background: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -208,11 +209,11 @@ export default {
     .hotGoods {
         width: 100%;
         min-height: px2rem(100);
-        background: blue;
-
+        // background: blue;
         .tit {
             padding-left: px2rem(10);
             border: solid px2rem(1) #ccc;
+            background: #eee;
         }
 
         .wrapper {
@@ -222,12 +223,10 @@ export default {
         }
         .main {
             width: 100%;
-            // height: 100%;
             .goods {
                 display: flex;
-                background: green;
                 padding: px2rem(10) px2rem(10);
-                border: solid px2rem(1) #ccc;
+                // border: solid px2rem(1) #ccc;
                 position: relative;
 
                 .cart {
@@ -248,7 +247,7 @@ export default {
                 }
                 .r {
                     flex: 1;
-                    background: yellow;
+                    background: #fff;
                 }
             }
         }

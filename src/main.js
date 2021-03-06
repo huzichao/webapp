@@ -15,6 +15,11 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/swiper.scss'
 Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 
+//配置vant组件库
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+
 new Vue({
     router,
     store,
